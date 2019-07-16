@@ -1,0 +1,9 @@
+<div *ngFor="let contact of contacts">
+  <ul class="contact-list">
+    <li>ID: {{ contact.id }}</li>
+    <li>{{ contact.name }}</li>
+    <li>{{ contact.lastName }}</li>
+  </ul>
+  <button (click)="deleteContact(contact)">Delete Contact</button>
+  <a routerLink="/contacts/{{ contact.id }}"> <app-contact-list [contact]="contact"></app-contact-list></a>
+</div>
